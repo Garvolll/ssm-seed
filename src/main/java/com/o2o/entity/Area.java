@@ -1,6 +1,6 @@
 package com.o2o.entity;
 
-import java.sql.Timestamp;
+
 import java.util.Date;
 
 /**
@@ -11,22 +11,22 @@ import java.util.Date;
  */
 public class Area {
 
-    private Integer id;
+    private Integer areaId;
     //区域名称
     private String areaName;
     //权重
     private Integer priority;
     //创建时间
-    private Date  creatTime;
-    //更新时间
-    private Date lastTime;
+    private Date createTime;
+    // 更新时间
+    private Date lastEditTime;
 
-    public Integer getId() {
-        return id;
+    public Integer getAreaId() {
+        return areaId;
     }
 
-    public void setId(Integer id) {
-        this.id = id;
+    public void setAreaId(Integer areaId) {
+        this.areaId = areaId;
     }
 
     public String getAreaName() {
@@ -45,30 +45,30 @@ public class Area {
         this.priority = priority;
     }
 
-    public Date getCreatTime() {
-        return creatTime;
+    public Date getCreateTime() {
+        return createTime;
     }
 
-    public void setCreatTime(Date creatTime) {
-        this.creatTime = creatTime;
+    public void setCreateTime(Date createTime) {
+        this.createTime = createTime;
     }
 
-    public Date getLastTime() {
-        return lastTime;
+    public Date getLastEditTime() {
+        return lastEditTime;
     }
 
-    public void setLastTime(Date lastTime) {
-        this.lastTime = lastTime;
+    public void setLastEditTime(Date lastEditTime) {
+        this.lastEditTime = lastEditTime;
     }
 
     @Override
     public String toString() {
         return "Area{" +
-                "id=" + id +
+                "areaId=" + areaId +
                 ", areaName='" + areaName + '\'' +
                 ", priority=" + priority +
-                ", creatTime=" + creatTime +
-                ", lastTime=" + lastTime +
+                ", createTime=" + createTime +
+                ", lastEditTime=" + lastEditTime +
                 '}';
     }
 }
