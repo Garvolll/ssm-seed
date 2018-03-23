@@ -21,3 +21,12 @@ nbbuild/
 dist/
 nbdist/
 .nb-gradle/
+
+###############
+#   front     #
+###############
+/node_modules/
+/resource/
+/.git/
+/dist/
+/copy.js

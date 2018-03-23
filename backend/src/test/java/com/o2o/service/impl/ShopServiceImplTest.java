@@ -12,6 +12,8 @@ import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.InputStream;
 
 import static org.junit.Assert.*;
 
@@ -48,7 +50,8 @@ public class ShopServiceImplTest extends BaseTest {
         shop.setPriority(3);
         shop.setShopAddr("ttt");
         File shopImg = new File("C:\\Users\\sys-12\\IdeaProjects\\o2o\\src\\main\\resources\\avatar.jpg");
-        ShopExecution se = shopService.addShop(shop,shopImg);
+        InputStream is= new FileInputStream(shopImg);
+        ShopExecution se = shopService.addShop(shop,is,shopImg.getName());
         if(se.getState()==ShopStateEnum.CHECK.getState()){
             super.logger.info("res={}",se);
         }

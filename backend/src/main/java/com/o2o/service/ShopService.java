@@ -4,6 +4,7 @@ import com.o2o.dto.ShopExecution;
 import com.o2o.entity.Shop;
 
 import java.io.File;
+import java.io.InputStream;
 
 /**
  * Description:
@@ -17,5 +18,5 @@ public interface ShopService {
      * @param shop
      * @return
      */
-    ShopExecution addShop(Shop shop,File shopImg) ;
+    ShopExecution addShop(Shop shop,InputStream shopImg,String fileName) ;
 }

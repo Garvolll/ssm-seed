@@ -9,6 +9,7 @@ import org.springframework.web.multipart.commons.CommonsMultipartFile;
 import javax.imageio.ImageIO;
 import java.io.File;
 import java.io.IOException;
+import java.io.InputStream;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Random;
@@ -29,9 +30,9 @@ public class ImageUtil {
     * @Description: 处理缩略图，并返回新生成图片的相对值路径 
     * @Param: [thumbnail, targetAddr] 
     */ 
-    public static String generatorThumbnails(File thumbnail, String targetAddr) {
+    public static String generatorThumbnails(InputStream thumbnail,String filename, String targetAddr) {
         String realFileName = getRandomFileName();
-        String extension = getFileExtension(thumbnail);
+        String extension = getFileExtension(filename);
         makeDirPath(targetAddr);
         String relativeAddr = targetAddr + realFileName + extension;
         logger.debug("current complete addr is:"+PathUtil.getImgBasePath()+relativeAddr);
@@ -61,9 +62,8 @@ public class ImageUtil {
      * @Description: 获取文件拓展名
      * @Param: [fileName]
      */
-    private static String getFileExtension(File cFile) {
-        String originalFileName = cFile.getName();
-        return originalFileName.substring(originalFileName.lastIndexOf("."));
+    private static String getFileExtension(String filename) {
+        return filename.substring(filename.lastIndexOf("."));
     }
 
     private static void makeDirPath(String targetAddr) {
