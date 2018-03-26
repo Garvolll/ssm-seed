@@ -27,7 +27,7 @@ public class ImageUtil {
     private static Logger logger = LoggerFactory.getLogger(ImageUtil.class);
     
     /** 
-    * @Description: 处理缩略图，并返回新生成图片的相对值路径 
+    * @Description: 处理缩略图，并返回新生成图片的相对路径
     * @Param: [thumbnail, targetAddr] 
     */ 
     public static String generatorThumbnails(InputStream thumbnail,String filename, String targetAddr) {

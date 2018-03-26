@@ -19,4 +19,5 @@ public interface ShopService {
      * @return
      */
     ShopExecution addShop(Shop shop,InputStream shopImg,String fileName) ;
+
 }
