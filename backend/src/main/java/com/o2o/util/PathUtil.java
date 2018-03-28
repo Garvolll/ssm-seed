@@ -24,4 +24,9 @@ public class PathUtil {
         String imgPath = "/upload/item/shop/"+shopId+"/";
         return imgPath.replace("/",separator);
     }
+
+    public static String getShopCategoryImgPath(long shopCategoryId){
+        String imgPath = "/upload/item/shopCategory/"+shopCategoryId+"/";
+        return imgPath.replace("/",separator);
+    }
 }

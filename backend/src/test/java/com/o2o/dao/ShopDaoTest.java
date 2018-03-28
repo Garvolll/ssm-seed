@@ -14,7 +14,7 @@ import org.springframework.beans.factory.annotation.Autowired;
  * Date: 2018-03-22
  * Time: 16:13
  */
-public class ShopDapTest extends BaseTest{
+public class ShopDaoTest extends BaseTest{
     @Autowired
     private ShopDao shopDao;
     @Test
@@ -51,4 +51,8 @@ public class ShopDapTest extends BaseTest{
         int effectNum =  shopDao.updateShop(shop);
     }
 
+    @Test
+    public void queryByShopId() throws Exception {
+       super.logger.info("res={}",shopDao.queryByShopId(58L));
+    }
 }
